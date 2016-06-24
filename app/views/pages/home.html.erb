@@ -1,4 +1,10 @@
-<div class="jumbotron">
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb <%= link_to "Aqui", "http://www.google.com.pe", class: 'btn btn-default' %></p>
+<div class="jumbotron center">
+	<h1>Bienvenido</h1>
+	<% if user_signed_in? %>
+		#Te has logeado
+	<% else %>
+		<p>
+			<%= link_to "Registrate", new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+		</p>
+	<% end %>
 </div>
